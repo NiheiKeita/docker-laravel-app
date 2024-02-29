@@ -11,3 +11,4 @@ COPY ./php.ini /usr/local/etc/php/php.ini
 COPY --from=composer:2.7 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /app
+
