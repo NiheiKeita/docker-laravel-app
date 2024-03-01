@@ -1,5 +1,6 @@
 name: PHPStan
 on: [push]
+
 jobs:
   phpunit:
     name: PHPStan (PHP ${{ matrix.php-versions }} on ${{ matrix.operating-system }})
