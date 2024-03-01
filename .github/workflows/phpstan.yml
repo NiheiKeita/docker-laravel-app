@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./src
+        working-directory: src
     steps:
       # リポジトリの最新ファイル1世代分だけをチェックアウト
       - uses: actions/checkout@v2
@@ -25,7 +25,6 @@ jobs:
 
       - name: Composer install
         run: composer install
-          working-directory: ./src
 
       # setup-phpにphpstanはあるがLarastanがなさそうなので、個別にインストール
       - name: Larastan install
