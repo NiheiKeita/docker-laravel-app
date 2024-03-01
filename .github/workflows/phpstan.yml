@@ -24,6 +24,7 @@ jobs:
           coverage: none
 
       - name: Composer install
+        working-directory: ./src
         run: composer install
 
       # setup-phpにphpstanはあるがLarastanがなさそうなので、個別にインストール
