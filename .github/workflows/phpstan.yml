@@ -29,4 +29,4 @@ jobs:
         uses: tj-actions/changed-files@v29.0.3
 
       - name: Run PHPStan
-        run: vendor/bin/phpstan analyze -c ./phpstan.neon
+        run: vendor/bin/phpstan analyze
