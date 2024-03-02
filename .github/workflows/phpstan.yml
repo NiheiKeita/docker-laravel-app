@@ -24,9 +24,5 @@ jobs:
       - name: Larastan install
         run: composer require nunomaduro/larastan --dev
 
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v29.0.3
-
       - name: Run PHPStan
         run: vendor/bin/phpstan analyze
