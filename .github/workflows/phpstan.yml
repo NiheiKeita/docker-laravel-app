@@ -29,5 +29,4 @@ jobs:
         uses: tj-actions/changed-files@v29.0.3
 
       - name: Run PHPStan
-        run: /src/vendor/bin/phpstan analyze --memory-limit=-1 -l 0 -c /src/vendor/nunomaduro/larastan/extension.neon  ${{ steps.changed-files.outputs.all_changed_files }}
-        working-directory: /
+        run: vendor/bin/phpstan analyze -c ./phpstan.neon
