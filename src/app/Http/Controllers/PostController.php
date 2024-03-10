@@ -8,7 +8,6 @@ class PostController extends Controller
 {
     public function index():string
     {
-        dd($this->count());
         return "index";
     }
 
