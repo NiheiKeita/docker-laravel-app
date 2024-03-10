@@ -43,7 +43,7 @@
 // for($i=0;$i++<100;)echo$i%3?$i%5?$i:"":"Fizz",$i%5?
 // :"Buzz
 // ";
-for($i=0;$i++<100;)echo$i%3?$i%5?$i:'':'Fizz',$i%5?'
+for(;@$i++<100;)echo$i%3?$i%5?$i:'':'Fizz',$i%5?'
 ':"Buzz
 ";
 // $i=0;while($i<100)echo$i%3?$i%5?$i:'':'Fizz',$i%5?'
