@@ -19,4 +19,4 @@ jobs:
           docker compose exec app composer install
       - name: phpunit
         run: |
-          docker compose exec app php vendor/bin/phpunit
+          docker compose exec app php artisan test
