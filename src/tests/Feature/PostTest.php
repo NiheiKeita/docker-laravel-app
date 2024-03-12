@@ -15,6 +15,6 @@ class PostTest extends TestCase
     {
         $response = $this->get('/users');
 
-        $response->assertStatus(404);
+        $response->assertStatus(200);
     }
 }
