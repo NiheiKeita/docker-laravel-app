@@ -16,7 +16,7 @@ jobs:
           docker-compose up -d
       - name: composer install
         run: |
-          composer install
+          docker-compose exec app bash -c "composer install"
       - name: phpunit
         run: |
-          php artisan test
+          docker-compose exec app bash -c "php vendor/bin/phpunit"
