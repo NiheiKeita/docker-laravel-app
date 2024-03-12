@@ -8,20 +8,15 @@ jobs:
     defaults:
       run:
         working-directory: ./src
-    defaults:
-      run:
-        working-directory: ./src
     steps:
       - uses: actions/checkout@v2
       - name: dokcer-compose up
         run: |
           # docker-compose build
           docker-compose up -d
-
       - name: composer install
         run: |
-          docker-compose exec app bash -c "composer install"
-          
+          docker compose exec app composer install
       - name: phpunit
         run: |
-          docker-compose exec app bash -c "php vendor/bin/phpunit"
+          docker compose exec app php vendor/bin/phpunit
