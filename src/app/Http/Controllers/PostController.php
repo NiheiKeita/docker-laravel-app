@@ -47,7 +47,7 @@ class PostController extends Controller
         return "destroy";
     }
 
-    public function count():int
+    public function count()
     {
         $usePost = new Lib\UsePost;
         // $count = $usePost;
