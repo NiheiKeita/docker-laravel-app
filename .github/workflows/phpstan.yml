@@ -9,20 +9,19 @@ jobs:
         working-directory: ./src
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: "8.2"
-          tools: composer, cs2pr
-          coverage: none
+      - name: dokcer-compose up
+        run: |
+          # docker-compose build
+          docker-compose up -d
 
       - name: Composer install
-        run: composer install
+        run: docker compose exec app composer install
+
+      - name: Laravel Settings
+        run: docker-compose exec -T app cp .env.example .env
 
       - name: Larastan install
-        run: composer require nunomaduro/larastan --dev
+        run: docker compose exec app composer require nunomaduro/larastan --dev
 
       - name: Run PHPStan
-        run: vendor/bin/phpstan analyze
+        run: docker compose exec app vendor/bin/phpstan analyze
