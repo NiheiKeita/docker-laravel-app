@@ -1,9 +1,10 @@
 <?php
+
 namespace Lib;
 
 class UsePost
 {
-    function count():int
+    public function count(): int
     {
         return 1;
     }

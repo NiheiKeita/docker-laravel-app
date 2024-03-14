@@ -1,57 +1,58 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Lib;
+use Lib\UsePost;
 
 class PostController extends Controller
 {
-    public function index():string
+    public function index(): string
     {
         return "index";
     }
 
-    public function create():string
+    public function create(): string
     {
         //
         return "create";
     }
 
-    public function store(Request $request):string
+    public function store(Request $request): string
     {
         //
-        return "store";
+        return "store" . $request;
     }
 
-    public function show(int $id):string
+    public function show(int $id): string
     {
         //
-        return "show";
+        return "show" . $id;
     }
 
-    public function edit(int $id):string
+    public function edit(int $id): string
     {
         //
-        return "edit";
+        return "edit" . $id;
     }
 
-    public function update(Request $request, int $id):string
+    public function update(Request $request, int $id): string
     {
         //
-        return "update";
+        return "update" . $id . $request;
     }
 
-    public function destroy(int $id):string
+    public function destroy(int $id): string
     {
         //
-        return "destroy";
+        return "destroy" . $id;
     }
 
-    public function count():int
+    public function count(): UsePost
     {
-        $usePost = new Lib\UsePost;
+        $usePost = new UsePost();
         // $count = $usePost;
 
-        return 1;
+        return $usePost;
     }
 }
