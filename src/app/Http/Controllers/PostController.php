@@ -48,7 +48,7 @@ class PostController extends Controller
         return "destroy" . $id;
     }
 
-    public function count():UsePost
+    public function count(): UsePost
     {
         $usePost = new UsePost();
         // $count = $usePost;
