@@ -3,7 +3,7 @@ name: phpcs
 on: [pull_request]
 
 jobs:
-  build:
+  phpcs:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -22,4 +22,4 @@ jobs:
           docker-compose exec -T app cp .env.example .env
       - name: composer phpcs .
         run: |
-          docker compose exec app php artisan test
+          docker compose exec app composer phpcs .
