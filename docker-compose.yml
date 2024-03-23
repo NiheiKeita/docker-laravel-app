@@ -19,6 +19,17 @@ services:
     volumes:
       - ./src/:/app
 
+  swagger:
+    build:
+      context: ./docker/swagger
+      dockerfile: Dockerfile
+    ports:
+      - 8082:81
+    depends_on:
+      - app
+    volumes:
+      - ./swagger/:/app/swagger
+
   db:
     build:
       context: ./docker/db
