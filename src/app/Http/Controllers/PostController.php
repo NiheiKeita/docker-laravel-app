@@ -96,7 +96,6 @@ class PostController extends Controller
     {
         $usePost = new UsePost();
         // $count = $usePost;
-
         return $usePost;
     }
 }
