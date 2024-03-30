@@ -89,7 +89,6 @@ class PostController extends Controller
     )]
     public function destroy(int $id): string
     {
-        
         return "destroy" . $id;
     }
 
